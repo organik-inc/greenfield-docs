@@ -17,9 +17,9 @@ manage your account, balance, and billings.
 ## Greenfield Command
 
 [Greenfield Command](https://github.com/bnb-chain/greenfield-cmd) is a powerful command line to interact with Greenfield,
-by which you can manage your objects on Greenfield. 
+by which you can manage your resources on Greenfield. 
 
-### Gommand Tool Guide
+### Command Tool Guide
 
 This command tool supports basic storage functions, including creating buckets, uploading and downloading files, and deleting resources, 
 and it also supports related operations such as groups, permissions, banks, and cross-chain.
@@ -30,7 +30,7 @@ The configuration file include three parts of information, including rpcAddr, ch
 Below is an example of a configuration file, where the rpcAddr, chainId, and test net are consistent.
 The configuration for passwordFile is the path to the file containing the password required to generate the keystore.
 ```
-rpcAddr = "gnfd-testnet-fullnode-cosmos-us.bnbchain.org:9090"
+rpcAddr = "https://gnfd-testnet-fullnode-tendermint-us.bnbchain.org:443"
 chainId = "greenfield_5600-1"
 passwordFile = "password.txt"
 ```
@@ -53,6 +53,8 @@ the following command can be used to generate a keystore file called key.json:
 ```
 gnfd-cmd gen-key --privKeyFile key.txt --password password.txt  key.json
 ```
+The content of the keystore file is the encrypted private key information. After the keystore file is generated, other commands need to be run with the addition of "--keystore keystore-path".
+The default keystore file is "key.json".
 
 #### List Storage providers
 
@@ -92,7 +94,6 @@ The following command example uploads an object named 'testObject' to the 'testB
 The file payload for the upload is read from the local file indicated by 'file-path'.
 ```
 gnfd-cmd storage put --contentType "text/xml"  file-path  gnfd://testBucket/testObject
-
 ```
 After the command is executed, it will send createObject txn to chain and uploads the payload of object to the storage provider.
 The command will return the uploading info after the objects has been sealed.
