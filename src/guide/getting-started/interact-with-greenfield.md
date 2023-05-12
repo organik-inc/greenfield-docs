@@ -53,7 +53,7 @@ the following command can be used to generate a keystore file called key.json:
 ```
 gnfd-cmd gen-key --privKeyFile key.txt --password password.txt  key.json
 ```
-The content of the keystore file is the encrypted private key information. After the keystore file is generated, other commands need to be run with the addition of "--keystore keystore-path".
+The content of the keystore file is the encrypted private key information. After the keystore file is generated, other commands need to be run with the addition of "-k keystore-path".
 The default keystore file is "key.json".
 
 #### List Storage providers
@@ -62,7 +62,7 @@ Before making a bucket and uploading files, we need to select a storage provider
 By executing the following command, we can obtain a list of storage providers supported by Greenfield.
 
 ```
-gnfd-cmd --keystore key.json ls-sp
+gnfd-cmd -k key.json ls-sp
 ```
 You can take note of the operator-address information for the storage provider which is intended to be uploaded to. 
 This parameter will be required for making the bucket in the next step.
