@@ -101,11 +101,11 @@ The following lists the supported data storage systems:
 1. Install MySQL yum package
 
 ```shell
-# 1. Install MySQL yum package
+# 1. Download MySQL yum package
 wget http://repo.mysql.com/mysql57-community-release-el7-10.noarch.rpm
 
 # 2. Install MySQL source
-wget http://repo.mysql.com/mysql57-community-release-el7-10.noarch.rpm
+rpm -Uvh mysql57-community-release-el7-10.noarch.rpm
 
 # 3. Install public key
 rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
