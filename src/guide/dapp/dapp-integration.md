@@ -155,8 +155,8 @@ Alternatively, you can obtain the contracts directly from the GitHub repository 
    import "@bnb-chain/greenfield-contracts-sdk/ObjectApp.sol";
    import "@bnb-chain/greenfield-contracts-sdk/GroupApp.sol";
    import "@bnb-chain/greenfield-contracts-sdk/interface/IERC1155.sol";
-   import "@bnb-chain/greenfield-contracts-sdk/interface/IERC721Nontransferable.sol";
-   import "@bnb-chain/greenfield-contracts-sdk/interface/IERC1155Nontransferable.sol";
+   import "@bnb-chain/greenfield-contracts-sdk/interface/IERC721NonTransferable.sol";
+   import "@bnb-chain/greenfield-contracts-sdk/interface/IERC1155NonTransferable.sol";
    ...
    
    contract EbookShop is BucketApp, ObjectApp, GroupApp {
